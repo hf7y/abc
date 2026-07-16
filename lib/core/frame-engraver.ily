@@ -1,3 +1,9 @@
+%%% lib/core/frame-engraver.ily
+%%% Graphical frame notation (boxes/repeat-barline frames with an
+%%% extender line and bracket). Self-contained, instrument-agnostic.
+%%% Activate frameEngraver in \layout (see project/style.ily for the
+%%% \consists \frameEngraver hookup used by this project).
+
 %\version "2.17.23"
 
 % Uncomment the following line to show the skylines.
@@ -712,5 +718,23 @@ frameEnd =
 % There is no `frameExtenderStart' because extender is begun with \frameEnd
 frameExtenderEnd =
 #(make-span-event 'FrameExtenderEvent STOP)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SELF-ACTIVATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The add-grob-definition calls above only APPEND to the Scheme variable
+% all-grob-descriptions -- they don't make those new grob types (Frame,
+% FrameBracket, FrameExtender, FrameStub) usable on their own. LilyPond
+% only picks up new entries in that list once something re-applies it to
+% the \Global context via \grobdescriptions. Without this, \frameStart
+% fails with "No grob definition found for `Frame'." Doing it here (once,
+% as part of loading this file) keeps this extension genuinely
+% self-activating -- consists \frameEngraver in your own \layout is still
+% required (that's the per-score choice of where frames render), but
+% nothing else.
+\layout {
+  \context {
+    \Global
+    \grobdescriptions #all-grob-descriptions
+  }
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

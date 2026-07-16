@@ -1,7 +1,0 @@
-i_coin_gm {
-  g1 |  
-}
-
-\score {
-  \i_coin_gm
-}

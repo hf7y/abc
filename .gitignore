@@ -1,0 +1,8 @@
+# LilyPond build output -- regenerate with lilypond, don't track it.
+*.pdf
+*.midi
+*.mid
+
+# Local-only legacy backup, superseded by git history (see the "initial"
+# commit for these files' pre-reorg content).
+_old/
