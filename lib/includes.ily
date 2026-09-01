@@ -6,8 +6,8 @@
 %%%       that should ever appear in a reel file (e.g. 1m.ly) or cue
 %%%       .ily file.
 %%%
-%%% Thin loader: generic core/ (promotable to its own repo later) first,
-%%% then this project's house style. See lib/README.md for the split.
+%%% Thin loader: generic core/ -- the hf7y/zly submodule -- first, then
+%%% this project's house style.
 
 \version "2.24.0"
 
