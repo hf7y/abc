@@ -4,22 +4,19 @@
 %%% variable names themselves. Not \included by anything -- a starting
 %%% point, not a library module.
 %%%
-%%% Why this exists: see reel-template.ly's header comment -- the exact
-%%% bug this guards against (2m1.ily silently keeping 1m1.ily's variable
-%%% names after a copy-paste) is a renaming mistake INSIDE this kind of
-%%% file, not in the reel that includes it. Placeholders that don't look
-%%% like a plausible real answer are harder to accidentally leave in
-%%% than a real name borrowed from whatever file was copied. Run
-%%% check-cue-naming.sh (repo root) after filling this in -- it checks
-%%% that the variable prefix below actually matches this file's own
-%%% `opus` header field, which is exactly the mismatch that shipped
-%%% unnoticed in 2m1.ily.
+%%% Why this exists: the bug it guards against (2m1.ily silently keeping
+%%% 1m1.ily's variable names after a copy-paste) is a renaming mistake
+%%% INSIDE this kind of file, not in the reel that includes it.
+%%% Placeholders that don't look like a plausible real answer are harder
+%%% to leave in than a real name borrowed from whatever file was copied.
+%%% The variable prefix below must match this file's own `opus` header
+%%% field; that mismatch is exactly what shipped unnoticed in 2m1.ily.
 %%%
 %%% Naming: <<reel>><<cue>>_<<instrument>>, spelled out because LilyPond
 %%% identifiers can't start with a digit -- e.g. reel 3 cue 1 is
 %%% "threeMone" (three + M + one). Every variable in this file must start
 %%% with that SAME spelled prefix; the reel file that \includes this
-%%% references them by that exact prefix too (see reel-template.ly).
+%%% references them by that exact prefix too.
 %%%
 %%% The \transpose c c' / c c, / c c,, wrapping each instrument below is
 %%% NOT related to project/instruments.ily's \transposition (that's for
