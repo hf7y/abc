@@ -1,0 +1,11 @@
+# .agent-project -- this repo is an agent PROJECT, not merely a repository.
+#
+# Resolved across every non-archived hf7y repo by realisateur's verb build,
+# which records the repos carrying it as the registry block of manifest.tsv.
+# Only the file's EXISTENCE is read; nothing parses its contents.
+#
+# Declaring the project is NOT arming it. Dispatch is decided solely by a row
+# in scheduler/schedule/ROSTER, which this file does not create. Standing abc
+# up is tracked in hf7y/realisateur#1277.
+#
+# TO RETIRE: delete this file, or archive the repo.
