@@ -1,7 +1,7 @@
 %%% lib/project/timing.ily
 %%% Chronological (movie-timecode) tracking for film cues. Project-
 %%% specific for now; promote to core/ once used across more than one
-%%% project (see lib/README.md for the split rationale).
+%%% project.
 %%%
 %%% CONTENTS:
 %%%   \cueTime                 Suffix event -- prints elapsed timecode

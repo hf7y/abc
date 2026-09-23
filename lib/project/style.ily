@@ -9,9 +9,8 @@
 
 %%% ── LAYOUT ──────────────────────────────────────────────────────────
 %%% Overrides here apply to all scores in all reels.
-%%% Reel-level layout exceptions go in that reel's own file (e.g. 1m.ly --
-%%% see lib/README.md's "Reel & cue conventions" section) inside a local
-%%% \layout block nested in its \score.
+%%% Reel-level layout exceptions go in that reel's own file (e.g. 1m.ly),
+%%% inside a local \layout block nested in its \score.
 
 \layout {
   indent       = 0.5\in
@@ -32,7 +31,7 @@
     %%% this repo -- if the reasoning behind it ever surfaces (worth
     %%% capturing if so), it belongs here.
     %%% If a reel needs non-proportional, override in that reel's own
-    %%% \score (see lib/README.md's "Reel & cue conventions"):
+    %%% \score:
     %%%   \score { \layout { \context { \Score
     %%%     proportionalNotationDuration = ##f } } }
     proportionalNotationDuration = #(ly:make-moment 1/8)
@@ -139,7 +138,7 @@
   %%% \header { instrument = "..." } set inside a per-instrument \score
   %%% (LilyPond's own part-extraction convention). Currently unused/inert:
   %%% no reel in this project sets that field, since every real reel so
-  %%% far is one combined conductor-score \score (see reel-template.ly),
+  %%% far is one combined conductor-score \score,
   %%% not one \score per extracted part -- this is here ready for if/when
   %%% that changes, not a sign anything's broken now.
   %%% page numbers are automatic

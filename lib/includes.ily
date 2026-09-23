@@ -12,6 +12,5 @@
 \version "2.24.0"
 
 \include "core/includes.ily"
-\include "project/instruments.ily"
 \include "project/style.ily"
 \include "project/timing.ily"
