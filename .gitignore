@@ -6,3 +6,9 @@
 # Local-only legacy backup, superseded by git history (see the "initial"
 # commit for these files' pre-reorg content).
 _old/
+
+# Media sediment, ~1 GB, predating the reorg. Never belongs in git; it is
+# backed up on dexter at /mnt/d/gardien-media/mandark/Abecedarian and is
+# tracked for indexing and relocation by hf7y/abc#9. Ignored so it stops
+# sitting in `git status` belonging to nobody.
+Abecedarian/
